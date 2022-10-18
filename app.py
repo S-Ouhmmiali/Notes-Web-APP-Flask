@@ -11,7 +11,6 @@ from werkzeug.datastructures import MultiDict
 import datetime
 
 
-###### Setting app the database
 app= Flask(__name__)
 app.config['SECRET_KEY'] = 'mykey'
 
