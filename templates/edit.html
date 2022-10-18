@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container " style="margin: auto;
+                              width: 50%;
+                              padding: 10px;">
+  <div class="jumbotron vertical-center m-3 " style="font-family: 'Francois One', sans-serif;
+                                                    width: 30rem; ">
+        <h1> Edit note here ! </h1>
+        <form method="POST">
+               <div class="form-group">
+                   {{form.hidden_tag()}}
+                   {{form.title.label}} {{form.title(class="form-control")}}
+               </div>
+               <div class="form-group">
+                   {{form.hidden_tag()}}
+                   {{form.description.label}} {{form.description(cols="30", rows="6",class="form-control")}}
+               </div>
+                <div class="form-group">
+                  {{form.submit(class="btn btn-warning")}}
+               </div>
+        </form>
+  </div>
+</div>
+{% endblock %}
